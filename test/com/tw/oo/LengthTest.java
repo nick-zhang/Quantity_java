@@ -2,6 +2,9 @@ package com.tw.oo;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
+
 /**
  * Created with IntelliJ IDEA.
  * User: NickZhang
@@ -11,7 +14,10 @@ import org.junit.Test;
  */
 public class LengthTest {
     @Test
-    public void should_test_length(){
-
+    public void Given12InchesShouldEqual1Feet()
+    {
+        Quantity twelveInches = new Quantity(12, LengthUnit.INCH);
+        Quantity oneFeet = new Quantity(1, LengthUnit.FEET);
+        assertTrue(twelveInches.equals(oneFeet));
     }
 }

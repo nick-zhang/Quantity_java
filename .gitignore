@@ -168,3 +168,4 @@ pip-log.txt
 .idea/
 *.iml
 application.xml
+*.class
