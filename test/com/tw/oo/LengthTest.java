@@ -20,4 +20,12 @@ public class LengthTest {
         Quantity oneFeet = new Quantity(1, LengthUnit.FEET);
         assertTrue(twelveInches.equals(oneFeet));
     }
+
+    @Test
+    public void Given3FeetShouldEqual1Yard()
+    {
+        Quantity threeFeet = new Quantity(3, LengthUnit.FEET);
+        Quantity oneYard = new Quantity(1, LengthUnit.YARD);
+        assertTrue(threeFeet.equals(oneYard));
+    }
 }

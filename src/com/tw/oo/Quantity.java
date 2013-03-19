@@ -35,6 +35,11 @@ public class Quantity {
         if (unit == LengthUnit.FEET) {
             myBasicAmount *= 12;
         }
+
+        if (unit == LengthUnit.YARD) {
+            myBasicAmount *= 12 * 3;
+        }
+
         return myBasicAmount;
     }
 
