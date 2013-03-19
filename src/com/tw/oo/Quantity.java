@@ -9,9 +9,9 @@ package com.tw.oo;
  */
 public class Quantity {
     private int amount;
-    private Object unit;
+    private LengthUnit unit;
 
-    public Quantity(int amount, Object unit) {
+    public Quantity(int amount, LengthUnit unit) {
         this.amount = amount;
         this.unit = unit;
     }
@@ -23,8 +23,17 @@ public class Quantity {
 
         Quantity quantity = (Quantity) o;
 
-        if (amount != quantity.amount) return false;
-        if (!unit.equals(quantity.unit)) return false;
+        int myBasicAmount = amount;
+        if (unit == LengthUnit.FEET) {
+            myBasicAmount *= 12;
+        }
+
+        int hisBasicAmount = quantity.amount;
+        if (quantity.unit == LengthUnit.FEET) {
+            hisBasicAmount  *= 12;
+        }
+
+        if (myBasicAmount != hisBasicAmount) return false;
 
         return true;
     }
