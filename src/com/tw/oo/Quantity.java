@@ -23,19 +23,19 @@ public class Quantity {
 
         Quantity quantity = (Quantity) o;
 
-        int myBasicAmount = amount;
-        if (unit == LengthUnit.FEET) {
-            myBasicAmount *= 12;
-        }
-
-        int hisBasicAmount = quantity.amount;
-        if (quantity.unit == LengthUnit.FEET) {
-            hisBasicAmount  *= 12;
-        }
+        int myBasicAmount = getBasicAmount(amount);
+        int hisBasicAmount = quantity.getBasicAmount(quantity.amount);
 
         if (myBasicAmount != hisBasicAmount) return false;
 
         return true;
+    }
+
+    private int getBasicAmount(int myBasicAmount) {
+        if (unit == LengthUnit.FEET) {
+            myBasicAmount *= 12;
+        }
+        return myBasicAmount;
     }
 
     @Override
