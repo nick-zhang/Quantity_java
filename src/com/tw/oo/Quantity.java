@@ -23,28 +23,12 @@ public class Quantity {
 
         Quantity quantity = (Quantity) o;
 
-        int myBasicAmount = getBasicAmount(amount);
-        int hisBasicAmount = quantity.getBasicAmount(quantity.amount);
+        int myBasicAmount =     amount * UnitConversionFactor.get(unit);
+        int hisBasicAmount = quantity.amount * UnitConversionFactor.get(quantity.unit);
 
         if (myBasicAmount != hisBasicAmount) return false;
 
         return true;
-    }
-
-    private int getBasicAmount(int myBasicAmount) {
-        if (unit == LengthUnit.FEET) {
-            myBasicAmount *= 12;
-        }
-
-        if (unit == LengthUnit.YARD) {
-            myBasicAmount *= 12 * 3;
-        }
-
-        if (unit == LengthUnit.MILE) {
-            myBasicAmount *= 12 * 3 * 1760;
-        }
-
-        return myBasicAmount;
     }
 
     @Override
