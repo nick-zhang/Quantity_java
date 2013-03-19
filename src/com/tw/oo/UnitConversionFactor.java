@@ -1,5 +1,7 @@
 package com.tw.oo;
 
+import java.util.HashMap;
+
 /**
  * Created with IntelliJ IDEA.
  * User: nickzhang
@@ -9,21 +11,17 @@ package com.tw.oo;
  */
 public class UnitConversionFactor {
 
+    private static HashMap<LengthUnit, Integer> LengthFactorMap = new HashMap<LengthUnit, Integer>();
+
+    static {
+        LengthFactorMap.put(LengthUnit.INCH, 1);
+        LengthFactorMap.put(LengthUnit.FEET, 12);
+        LengthFactorMap.put(LengthUnit.YARD, 12 * 3);
+        LengthFactorMap.put(LengthUnit.MILE, 1760 * 12 * 3);
+    }
+
     public static int get(LengthUnit unit) {
-        int factor = 1;
-        if (unit == LengthUnit.FEET) {
-            factor *= 12;
-        }
-
-        if (unit == LengthUnit.YARD) {
-            factor *= 12 * 3;
-        }
-
-        if (unit == LengthUnit.MILE) {
-            factor *= 12 * 3 * 1760;
-        }
-
-        return factor;
+        return LengthFactorMap.get(unit);
     }
 
 }
