@@ -9,5 +9,5 @@ package com.tw.oo;
  */
 public enum LengthUnit {
     FEET,
-    YARD, INCH
+    YARD, MILE, INCH
 }

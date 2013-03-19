@@ -18,7 +18,7 @@ public class LengthTest {
     {
         Quantity twelveInches = new Quantity(12, LengthUnit.INCH);
         Quantity oneFeet = new Quantity(1, LengthUnit.FEET);
-        assertTrue(twelveInches.equals(oneFeet));
+        assertTrue("12 inches should equal 1 feet.", twelveInches.equals(oneFeet));
     }
 
     @Test
@@ -26,6 +26,14 @@ public class LengthTest {
     {
         Quantity threeFeet = new Quantity(3, LengthUnit.FEET);
         Quantity oneYard = new Quantity(1, LengthUnit.YARD);
-        assertTrue(threeFeet.equals(oneYard));
+        assertTrue("3 feet should equal 1 yard.", threeFeet.equals(oneYard));
+    }
+
+    @Test
+    public void Given1760YardShouldEqual1Mile()
+    {
+        Quantity yard1760 = new Quantity(1760, LengthUnit.YARD);
+        Quantity oneMile = new Quantity(1, LengthUnit.MILE);
+        assertTrue("1760 yards should equal 1 mile.", yard1760.equals(oneMile));
     }
 }

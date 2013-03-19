@@ -40,6 +40,10 @@ public class Quantity {
             myBasicAmount *= 12 * 3;
         }
 
+        if (unit == LengthUnit.MILE) {
+            myBasicAmount *= 12 * 3 * 1760;
+        }
+
         return myBasicAmount;
     }
 
