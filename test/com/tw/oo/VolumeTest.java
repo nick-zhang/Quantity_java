@@ -27,4 +27,13 @@ public class VolumeTest {
         Quantity twoTbsp = new Quantity(2, VolumeUnit.TBSP);
         assertTrue(oneOz.equals(twoTbsp));
     }
+
+    @Test
+    public void Given1CUPShouldEqual8OZ()
+    {
+        Quantity oneCup = new Quantity(1, VolumeUnit.CUP);
+        Quantity eightOz = new Quantity(8, VolumeUnit.OZ);
+        assertTrue(oneCup.equals(eightOz));
+    }
+
 }

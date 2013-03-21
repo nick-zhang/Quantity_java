@@ -12,14 +12,15 @@ import java.util.HashMap;
 public enum VolumeUnit implements IUnit {
     TSP,
     TBSP,
-    OZ;
+    OZ, CUP;
 
     private static HashMap<VolumeUnit, Integer> VolumeFactorMap = new HashMap<VolumeUnit, Integer>();
 
     static {
         VolumeFactorMap.put(VolumeUnit.TSP, 1);
         VolumeFactorMap.put(VolumeUnit.TBSP, 3);
-        VolumeFactorMap.put(VolumeUnit.OZ, 3*2);
+        VolumeFactorMap.put(VolumeUnit.OZ, 3 * 2);
+        VolumeFactorMap.put(VolumeUnit.CUP, 8 * 3 * 2);
     }
 
     @Override
