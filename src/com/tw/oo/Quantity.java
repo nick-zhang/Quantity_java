@@ -23,6 +23,10 @@ public class Quantity {
 
         Quantity quantity = (Quantity) o;
 
+        boolean isUnitTypeTheSame = unit.getClass().getName().equals(quantity.unit.getClass().getName());
+        if (!isUnitTypeTheSame)
+            return false;
+
         int myBasicAmount =     amount * unit.conversionFactor();
         int hisBasicAmount = quantity.amount * quantity.unit.conversionFactor();
 

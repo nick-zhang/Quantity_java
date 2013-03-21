@@ -166,6 +166,5 @@ pip-log.txt
 ## Intellij IDEA
 #############
 .idea/
-*.iml
 application.xml
 *.class

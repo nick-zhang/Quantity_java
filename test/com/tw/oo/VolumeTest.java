@@ -1,7 +1,9 @@
 package com.tw.oo;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
+import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
 
 /**
@@ -13,27 +15,30 @@ import static junit.framework.Assert.assertTrue;
  */
 public class VolumeTest {
     @Test
-    public void Given1TBSPShouldEqual3TSP()
-    {
+    public void Given1TBSPShouldEqual3TSP() {
         Quantity threeTsp = new Quantity(3, VolumeUnit.TSP);
         Quantity oneTbsp = new Quantity(1, VolumeUnit.TBSP);
         assertTrue(threeTsp.equals(oneTbsp));
     }
 
     @Test
-    public void Given1OZShouldEqual2TBSP()
-    {
+    public void Given1OZShouldEqual2TBSP() {
         Quantity oneOz = new Quantity(1, VolumeUnit.OZ);
         Quantity twoTbsp = new Quantity(2, VolumeUnit.TBSP);
         assertTrue(oneOz.equals(twoTbsp));
     }
 
     @Test
-    public void Given1CUPShouldEqual8OZ()
-    {
+    public void Given1CUPShouldEqual8OZ() {
         Quantity oneCup = new Quantity(1, VolumeUnit.CUP);
         Quantity eightOz = new Quantity(8, VolumeUnit.OZ);
         assertTrue(oneCup.equals(eightOz));
     }
 
+    @Test
+    public void GivenLengthQuantityShouldNotEqualVolumeQuantity() {
+        Quantity oneTsp = new Quantity(1, VolumeUnit.TSP);
+        Quantity oneInch = new Quantity(1, LengthUnit.INCH);
+        assertFalse(oneTsp.equals(oneInch));
+    }
 }

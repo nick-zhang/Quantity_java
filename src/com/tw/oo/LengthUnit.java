@@ -9,7 +9,7 @@ import java.util.HashMap;
  * Time: 10:37 AM
  * To change this template use File | Settings | File Templates.
  */
-public enum LengthUnit implements IUnit{
+public enum LengthUnit implements IUnit {
     FEET,
     YARD,
     MILE,
