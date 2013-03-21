@@ -9,9 +9,9 @@ package com.tw.oo;
  */
 public class Quantity {
     private int amount;
-    private LengthUnit unit;
+    private IUnit unit;
 
-    public Quantity(int amount, LengthUnit unit) {
+    public Quantity(int amount, IUnit unit) {
         this.amount = amount;
         this.unit = unit;
     }

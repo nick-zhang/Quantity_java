@@ -7,7 +7,9 @@ package com.tw.oo;
  * Time: 10:37 AM
  * To change this template use File | Settings | File Templates.
  */
-public enum LengthUnit {
+public enum LengthUnit implements IUnit{
     FEET,
-    YARD, MILE, INCH
+    YARD,
+    MILE,
+    INCH
 }

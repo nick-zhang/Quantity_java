@@ -12,6 +12,7 @@ import java.util.HashMap;
 public class UnitConversionFactor {
 
     private static HashMap<LengthUnit, Integer> LengthFactorMap = new HashMap<LengthUnit, Integer>();
+    private static HashMap<VolumeUnit, Integer> VolumeFactorMap = new HashMap<VolumeUnit, Integer>();
 
     static {
         LengthFactorMap.put(LengthUnit.INCH, 1);
@@ -20,8 +21,16 @@ public class UnitConversionFactor {
         LengthFactorMap.put(LengthUnit.MILE, 1760 * 12 * 3);
     }
 
-    public static int get(LengthUnit unit) {
-        return LengthFactorMap.get(unit);
+    static {
+        VolumeFactorMap.put(VolumeUnit.TSP, 1);
+        VolumeFactorMap.put(VolumeUnit.TBSP, 3);
+    }
+
+    public static int get(IUnit unit) {
+        if (unit instanceof LengthUnit)
+            return LengthFactorMap.get(unit);
+        else
+            return VolumeFactorMap.get(unit);
     }
 
 }
