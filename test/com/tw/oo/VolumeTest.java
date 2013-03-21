@@ -20,4 +20,11 @@ public class VolumeTest {
         assertTrue(threeTsp.equals(oneTbsp));
     }
 
+    @Test
+    public void Given1OZShouldEqual2TBSP()
+    {
+        Quantity oneOz = new Quantity(1, VolumeUnit.OZ);
+        Quantity twoTbsp = new Quantity(2, VolumeUnit.TBSP);
+        assertTrue(oneOz.equals(twoTbsp));
+    }
 }
