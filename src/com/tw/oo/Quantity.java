@@ -23,8 +23,8 @@ public class Quantity {
 
         Quantity quantity = (Quantity) o;
 
-        int myBasicAmount =     amount * UnitConversionFactor.get(unit);
-        int hisBasicAmount = quantity.amount * UnitConversionFactor.get(quantity.unit);
+        int myBasicAmount =     amount * unit.conversionFactor();
+        int hisBasicAmount = quantity.amount * quantity.unit.conversionFactor();
 
         if (myBasicAmount != hisBasicAmount) return false;
 

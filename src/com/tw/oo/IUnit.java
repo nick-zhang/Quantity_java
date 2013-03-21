@@ -8,4 +8,5 @@ package com.tw.oo;
  * To change this template use File | Settings | File Templates.
  */
 public interface IUnit {
+    int conversionFactor();
 }

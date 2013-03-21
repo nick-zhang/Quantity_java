@@ -1,5 +1,7 @@
 package com.tw.oo;
 
+import java.util.HashMap;
+
 /**
  * Created with IntelliJ IDEA.
  * User: nickzhang
@@ -9,5 +11,17 @@ package com.tw.oo;
  */
 public enum VolumeUnit implements IUnit {
     TSP,
-    TBSP
+    TBSP;
+
+    private static HashMap<VolumeUnit, Integer> VolumeFactorMap = new HashMap<VolumeUnit, Integer>();
+
+    static {
+        VolumeFactorMap.put(VolumeUnit.TSP, 1);
+        VolumeFactorMap.put(VolumeUnit.TBSP, 3);
+    }
+
+    @Override
+    public int conversionFactor() {
+        return VolumeFactorMap.get(this);
+    }
 }
