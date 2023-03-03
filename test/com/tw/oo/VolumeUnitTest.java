@@ -1,10 +1,9 @@
 package com.tw.oo;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
-import static junit.framework.Assert.assertFalse;
-import static junit.framework.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,7 +12,7 @@ import static junit.framework.Assert.assertTrue;
  * Time: 1:49 PM
  * To change this template use File | Settings | File Templates.
  */
-public class VolumeTest {
+public class VolumeUnitTest {
     @Test
     public void Given1TBSPShouldEqual3TSP() {
         Quantity threeTsp = new Quantity(3, VolumeUnit.TSP);

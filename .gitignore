@@ -168,3 +168,5 @@ pip-log.txt
 .idea/
 application.xml
 *.class
+/out/production/Quantity_java/classpath.index
+/out/test/Quantity_java/classpath.index

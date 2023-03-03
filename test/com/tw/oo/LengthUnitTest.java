@@ -1,5 +1,6 @@
 package com.tw.oo;
 
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -11,7 +12,7 @@ import static org.junit.Assert.assertTrue;
  * Time: 9:56 AM
  * To change this template use File | Settings | File Templates.
  */
-public class LengthTest {
+public class LengthUnitTest {
     @Test
     public void Given12InchesShouldEqual1Feet()
     {
